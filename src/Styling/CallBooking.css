@@ -1,0 +1,37 @@
+.call-booking-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.call-booking-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.call-booking-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.call-booking-container form input, 
+.call-booking-container form button {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.call-booking-container form button {
+    background-color: #f39c12;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.call-booking-container form button:hover {
+    background-color: #e67e22;
+}

@@ -1,0 +1,26 @@
+.terms-conditions-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:#34495e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .terms-conditions-container h1 {
+    font-size: 2rem;
+    color: #161414;
+    margin-bottom: 20px;
+  }
+  
+  .terms-conditions-container h2 {
+    font-size: 1.5rem;
+    color:  #161414;
+    margin-top: 20px;
+  }
+  
+  .terms-conditions-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ffff;
+  }
+  

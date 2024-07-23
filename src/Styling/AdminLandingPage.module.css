@@ -1,0 +1,98 @@
+.admin-landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  color:  #f39c12;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.back-button:hover {
+  transform: scale(1.1);
+}
+
+.welcome-text {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  margin: 40px 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  position: relative;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.icon::after {
+  content: '';
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.user-icon:hover::after {
+  content: 'Click me to view your agents';
+  opacity: 1;
+}
+
+.plus-icon:hover::after {
+  content: 'Add new event images';
+  opacity: 1;
+}
+
+.shop-icon:hover::after {
+  content: 'Know your partners';
+  opacity: 1;
+}
+@media (max-width: 420px) { 
+
+  .welcome-text {
+   margin-top: 40%;
+   font-size: 25px;
+    font-weight: bold;
+  }
+  
+
+ }

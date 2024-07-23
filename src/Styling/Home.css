@@ -1,0 +1,387 @@
+/* General styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+  }
+  
+  .home-container {
+    text-align: center;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34495e;
+    padding: 10px 20px;
+    height: 60px;
+    position: sticky;
+    z-index: 1000; 
+    position: -webkit-sticky;
+    top: 0%;
+  }
+  
+  .logo{
+    display: flex;
+  }
+  .logostyle{
+    border-radius: 50%;
+    height: 75px;
+    width: 100px;
+  }
+
+  .nav-button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border: 2px solid #ecf0f1; /* Circle border color */
+    border-radius: 50%;
+    padding: 5px; /* Adjust padding as needed */
+    background-color: #34495e;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .nav-button-icon:hover {
+    background-color: #f39c12;
+    transform: scale(1.1);
+  }
+  
+  
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+  
+  
+  .nav-button {
+    background-color: #34495e;
+    color: #ecf0f1;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .nav-button:hover {
+    background-color: #f39c12;
+    transform: scale(1.1);
+  }
+  
+  /* Event blocks styling */
+  .event-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .event-block {
+   position: relative;
+    width: 80%;
+    height: 200px;
+    margin: 20px 0;
+    overflow: hidden; 
+    background-color: #34495e; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: dissolve 1.5s forwards;
+  }
+  
+  .event-title {
+    font-size: 2rem;
+    color: #f39c12;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+  }
+ 
+  .event-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire block */
+    z-index: -1; /* Places the video behind the text */
+  }
+  
+  
+  
+  /* Keyframes for animations */
+  @keyframes dissolve {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .event-block:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  
+  .event-block:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  .event-block:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+  
+  .event-block:nth-child(4) {
+    animation-delay: 2s;
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .nav-button {
+      padding: 8px 16px;
+      margin: 0 5px;
+    }
+
+    .nav-button-icon:hover {
+      background-color: #f39c12;
+      transform: scale(1.1);
+    }
+    .nav-button:hover {
+      background-color: #f39c12;
+      transform: scale(1.1);
+    }
+  
+    .event-block {
+      width: 90%;
+      height: 150px;
+    }
+  
+    .event-title {
+      font-size: 1rem;
+      color: #f39c12;
+      position: absolute;
+      top: 40%;
+      left: 35%;
+    }
+    .logo {
+      height: 60px; /* Adjust size as needed */
+  }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-button {
+      padding: 6px 12px;
+      margin: 0 3px;
+    }
+
+    .logo{
+      display: flex;
+    }
+    .logostyle{
+      border-radius: 50%;
+      height: 40px;
+      width: 40px;
+      margin-left: -20px;
+    }
+  
+    .event-block {
+      width: 95%;
+      height: 100px;
+    }
+  
+    .event-title {
+      font-size: 1rem;
+      color: #f39c12;
+      position: absolute;
+      top: 40%;
+      left: 35%;
+    }
+    .nav-button-icon:hover {
+      background-color: #f39c12;
+      transform: scale(1.1);
+    }
+    .nav-button:hover {
+      background-color: #f39c12;
+      transform: scale(1.1);
+    }
+   
+  }
+  /* Footer styling */
+.footer {
+  width: 100%;
+  background: #221141;
+  color: #d6dfed;
+  text-align: center;
+  position: relative;
+  margin-top: 60px; /* Ensures footer doesn't overlap content */
+}
+
+.footer-wave {
+  width: 100%;
+  height: 100px;
+  background: url('../Styling/Wave.svg') repeat-x;
+  background-size: cover;
+  position: absolute;
+  top: -100px;
+  animation: wave-animation 10s infinite linear;
+  z-index: -1; /* Places the wave behind the footer content */
+}
+
+@keyframes wave-animation {
+  0% {
+      background-position-x: 0;
+  }
+  100% {
+      background-position-x: 100%;
+  }
+}
+
+.footer section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer .socials {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer .social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #34495e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer .social-icon:hover {
+  transform: scale(1.1);
+}
+
+.footer .social-icon svg {
+  font-size: 20px;
+  color: #ecf0f1;
+}
+
+/* Hover effects for each social icon */
+.footer .social-icon.instagram:hover {
+  background-color: #e4405f; /* Instagram color */
+}
+
+.footer .social-icon.twitter:hover {
+  background-color: #1da1f2; /* Twitter color */
+}
+
+.footer .social-icon.facebook:hover {
+  background-color: #3b5998; /* Facebook color */
+}
+
+.footer .social-icon.linkedin:hover {
+  background-color: #0077b5; /* LinkedIn color */
+}
+
+.footer .social-icon.youtube:hover {
+  background-color: #ff0000; /* YouTube color */
+}
+
+.footer .social-icon.whatsapp:hover {
+  background-color: #25d366; /* WhatsApp color */
+}
+
+.footer .legal {
+  font-size: 12px;
+}
+
+.footer .legal a {
+  color: #d6dfed;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer .legal a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 420px) {
+  .footer section {
+      align-items: center;
+      padding-left: 0;
+      gap: 10px;
+  }
+
+  .footer .socials {
+      gap: 10px;
+  }
+
+  .footer .social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer .social-icon:hover {
+    transform: scale(1.1);
+}
+
+.footer .social-icon svg {
+    font-size: 20px;
+    color: #ecf0f1;
+}
+
+/* Hover effects for each social icon */
+.footer .social-icon.instagram:hover {
+    background-color: #e4405f; /* Instagram color */
+}
+
+.footer .social-icon.twitter:hover {
+    background-color: #1da1f2; /* Twitter color */
+}
+
+.footer .social-icon.facebook:hover {
+    background-color: #3b5998; /* Facebook color */
+}
+
+.footer .social-icon.linkedin:hover {
+    background-color: #0077b5; /* LinkedIn color */
+}
+
+.footer .social-icon.youtube:hover {
+    background-color: #ff0000; /* YouTube color */
+}
+
+.footer .social-icon.whatsapp:hover {
+    background-color: #25d366; /* WhatsApp color */
+}
+
+.footer .legal {
+    font-size: 12px;
+}
+
+.footer .legal a {
+    color: #d6dfed;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer .legal a:hover {
+    text-decoration: underline;
+}
+}

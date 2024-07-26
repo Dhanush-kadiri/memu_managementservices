@@ -2,14 +2,16 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUtensils, faGuitar, faPalette, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUtensils, faDrum, faGifts, faShieldAlt,faLightbulb,faBuilding } from '@fortawesome/free-solid-svg-icons';
 import '../Styling/Partners.css';
 
 const departments = [
+  { name: 'Stage Decoration', path: '/Home/Adminlogin/Adminlanding/Partners/stage-decoration', icon:faGifts },
   { name: 'Food', path: '/Home/Adminlogin/Adminlanding/Partners/food', icon: faUtensils },
-  { name: 'Stage Decoration', path: '/Home/Adminlogin/Adminlanding/Partners/stage-decoration', icon: faPalette },
-  { name: 'Band', path: '/Home/Adminlogin/Adminlanding/Partners/band', icon: faGuitar },
-  { name: 'Security', path: '/Home/Adminlogin/Adminlanding/Partners/security', icon: faShieldAlt }
+  { name: 'Band', path: '/Home/Adminlogin/Adminlanding/Partners/band', icon: faDrum },
+  { name: 'Security', path: '/Home/Adminlogin/Adminlanding/Partners/security', icon: faShieldAlt },
+  { name: 'Dj', path: '/Home/Adminlogin/Adminlanding/Partners/Dj', icon:faLightbulb   },
+  { name: 'Function Hall', path: '/Home/Adminlogin/Adminlanding/Partners/Function hall', icon: faBuilding },
 ];
 
 const Partners = () => {
@@ -78,7 +80,7 @@ const Partners = () => {
       <h1>Our Departments</h1>
       <div className="departments-grid">
         {departments.map(department => (
-          <Link key={department.name} to={department.path} className="department-card">
+          <Link key={department.name} to={department.path} className="department-card"  >
             <div className="department-icon">
               <FontAwesomeIcon icon={department.icon} />
             </div>

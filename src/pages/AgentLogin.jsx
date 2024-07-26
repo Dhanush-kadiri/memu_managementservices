@@ -10,7 +10,6 @@ const AgentLogin = () => {
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
   const navigate = useNavigate();
-
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -19,7 +18,10 @@ const AgentLogin = () => {
         password
       });
       navigate(`/Home/AgentLogin/Agenttasks?email=${email}`);
+      localStorage.setItem('email',response.email)
       alert(response.data.message);
+
+
 
     } catch (error) {
       alert(error.response.data.error);

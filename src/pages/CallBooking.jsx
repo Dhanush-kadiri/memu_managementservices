@@ -31,7 +31,7 @@ const CallBooking = () => {
     e.preventDefault();
     const data = {
       ...formData,
-      image: image
+      image: image || null
     };
 
     axios.post('http://localhost:5000/book_call', data)

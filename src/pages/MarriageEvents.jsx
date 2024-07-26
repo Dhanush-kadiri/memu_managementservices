@@ -215,6 +215,11 @@ const MarriageEvents = () => {
     setPreview(null);
   };
 
+  const handleSkip = () => {
+    localStorage.removeItem('selectedImage'); // Clear the selected image from local storage
+    navigate('/Home/Marriageevents/CallBooking');
+  };
+
   return (
     <div className="marriage-events-container">
       <nav className="navbar">
@@ -248,6 +253,12 @@ const MarriageEvents = () => {
           Upload Your Own Image
         </Button>
       </div>
+      <div className="upload-image-container" style={{margin:20}}>
+        <Button className="upload-image-button" onClick={handleSkip} variant='contained'>
+           skip this section 
+        </Button>
+      </div>
+
 
       <Modal
         open={open}

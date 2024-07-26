@@ -44,6 +44,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 
 import TermsConditions from './pages/TermsConditions';
 
+import Images from './pages/Images';
+
 
 function App() {
   return (
@@ -79,6 +81,10 @@ function App() {
            <Route  path='/Home/Agentlogin' element = { < AgentLogin /> }/>
 
            <Route  path='/Home/AgentLogin/Agenttasks'  element = { < AgentTasks /> } />
+
+           {/* <Route path="/Home/AgentLogin/Agenttasks/:eventType" element={< Images />} /> */}
+
+           <Route path="/Home/AgentLogin/Agenttasks/:eventType/:task_id" element={<Images />} />
 
            <Route  path='/Home/Birthdayevents' element = { < BirthdayEvents /> } />
 

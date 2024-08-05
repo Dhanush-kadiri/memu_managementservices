@@ -450,9 +450,10 @@ const AgentTasks = () => {
               <h2>{selectedTask.name}</h2>
 
               <p>ID: {selectedTask.id}</p>
-              <img src={`data:image/jpeg;base64,${selectedTask.image_data}`} alt={selectedTask.event_type} />
+              <img src={`data:image/jpeg;base64,${selectedTask.image_data}`} alt={selectedTask.event_type} style={{height:'25%',width:'100%'}} />
               <div>
-              <button onClick={() => setShowEventTypes(true)}>Upload /Change Image</button>
+              {/* <button onClick={() => setShowEventTypes(true)}>Upload /Change Image</button> */}
+              <button onClick={() => setShowEventTypes((prev) => !prev)}>Upload /Change Image</button>
               {showEventTypes && (
                 <div>
                   <Button onClick={() => navigate(`/Home/AgentLogin/Agenttasks/birthday/${selectedTask.id}?email=${agentEmail}`)}>Birthdays</Button>

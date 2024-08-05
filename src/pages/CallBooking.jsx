@@ -37,6 +37,7 @@ const CallBooking = () => {
     axios.post('http://localhost:5000/book_call', data)
       .then(response => {
         alert('Call booked successfully!');
+        
       })
       .catch(error => {
         console.error('Error booking call:', error);

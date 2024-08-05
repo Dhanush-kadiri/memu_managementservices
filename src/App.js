@@ -46,6 +46,8 @@ import TermsConditions from './pages/TermsConditions';
 
 import Images from './pages/Images';
 
+import AvatarPage from './pages/AvatarPage';
+
 
 function App() {
   return (
@@ -82,8 +84,6 @@ function App() {
 
            <Route  path='/Home/AgentLogin/Agenttasks'  element = { < AgentTasks /> } />
 
-           {/* <Route path="/Home/AgentLogin/Agenttasks/:eventType" element={< Images />} /> */}
-
            <Route path="/Home/AgentLogin/Agenttasks/:eventType/:task_id" element={<Images />} />
 
            <Route  path='/Home/Birthdayevents' element = { < BirthdayEvents /> } />
@@ -91,12 +91,12 @@ function App() {
            <Route  path='/Home/Marriageevents' element = { < MarriageEvents /> } />
             
            <Route  path='/Home/Marriageevents/CallBooking' element = { < CallBooking /> }  />
-
-          {/* <Route path='/Home/Marriageevents/Packages' element = { < Packages /> } /> */}
            
            <Route  path='/Home/Partiesevents' element = { < PartiesEvents /> } />
 
            <Route  path='/Home/Functionsevents' element = { < FunctionEvents />  } /> 
+
+           <Route path='/Home/Marriageevents/CallBooking/avatarpage' element = { < AvatarPage /> } />
 
         </Routes>
    </BrowserRouter>

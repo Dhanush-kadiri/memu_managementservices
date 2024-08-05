@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../Styling/MarriageEvents.css';
 import { Button, Modal, Box, Typography } from '@mui/material';
@@ -20,7 +20,10 @@ const BirthdayEvents = () => {
         console.error('Error fetching images:', error);
       });
   }, []);
-
+  const handleSkip = () => {
+    localStorage.removeItem('selectedImage'); // Clear the selected image from local storage
+    navigate('/Home/Marriageevents/CallBooking');
+  };
   const handleImageClick = (image) => {
     localStorage.setItem('selectedImage', image.image_data);
     navigate('/Home/Marriageevents/Packages');
@@ -67,14 +70,14 @@ const BirthdayEvents = () => {
 
   return (
     <div className="marriage-events-container">
-     <nav className="navbar">
+     {/* <nav className="navbar">
     
     <div className="nav-links">
       <Link to='/Home/AboutUs'> <button className="nav-button">About Us</button></Link>
       <Link to='/Home/OurGallery'> <button className="nav-button">Our Gallery</button></Link>
       <Link to='/Home/Reviews'> <button className="nav-button">Reviews</button></Link>
     </div>
-  </nav>
+  </nav> */}
      
         
 
@@ -99,6 +102,11 @@ const BirthdayEvents = () => {
       <div className="upload-image-container">
         <Button className="upload-image-button" onClick={handleOpen} variant='contained'>
           Upload Your Own Image
+        </Button>
+      </div>
+      <div className="upload-image-container" style={{margin:20}}>
+        <Button className="upload-image-button" onClick={handleSkip} variant='contained'>
+           skip this section 
         </Button>
       </div>
 

@@ -2,7 +2,7 @@
   "name": "myem",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Dhanush-kadiri.github.io/test1",
+  "homepage": "https://Dhanush-kadiri.github.io",
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",

@@ -73,7 +73,7 @@ const StartPage = () => {
         </div>
       ) : (
         <div className="container">
-          <h1 className="subtitle-top">Myem Welcomes You</h1>
+          <h1 className="subtitle-top">MEMU Welcomes You</h1>
           <img src={logo} alt="" className='title' onClick={(e)=>navigate('/Home/Adminlogin')} />
           <h1 className='subtitle-bottom'> Makes Events Memorable For U</h1>
           <Button 

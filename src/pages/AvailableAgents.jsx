@@ -12,7 +12,7 @@ const AvailableAgents = () => {
 
   const fetchAgents = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/agents');
+      const response = await axios.get('https://memu-mongo.onrender.com/agents');
       setAgents(response.data.agents);
     } catch (error) {
       console.error('Error fetching agents:', error);

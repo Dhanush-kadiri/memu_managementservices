@@ -84,7 +84,7 @@ const OurGallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/gallery')
+    axios.get('https://memu-mongo.onrender.com/gallery')
       .then(response => {
         setImages(response.data.images);
       })

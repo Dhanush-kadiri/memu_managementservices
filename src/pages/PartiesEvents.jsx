@@ -15,7 +15,7 @@ const PartiesEvents = () => {
     navigate('/Home/Marriageevents/CallBooking');
   };
   useEffect(() => {
-    axios.get('http://localhost:5000/images?event_type=parties')
+    axios.get('https://memu-mongo.onrender.com/images?event_type=parties')
       .then(response => {
         setImages(response.data.images);
       })
@@ -51,7 +51,7 @@ const PartiesEvents = () => {
     formData.append('image', selectedFile);
     formData.append('event_type', 'parties');
 
-    axios.post('http://localhost:5000/upload', formData)
+    axios.post('https://memu-mongo.onrender.com/upload', formData)
       .then(response => {
         setOpen(false);
         window.location.reload();

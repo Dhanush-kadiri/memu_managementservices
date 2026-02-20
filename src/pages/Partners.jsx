@@ -55,7 +55,7 @@ const Partners = () => {
     formDataToSend.append('address', formData.address);
 
     try {
-      const response = await axios.post('http://localhost:5000/partners', formDataToSend, {
+      const response = await axios.post('https://memu-mongo.onrender.com/partners', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

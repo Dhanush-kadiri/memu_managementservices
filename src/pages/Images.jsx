@@ -18,7 +18,7 @@ const Images = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/images?event_type=${eventType}`);
+        const response = await axios.get(`https://memu-mongo.onrender.com/images?event_type=${eventType}`);
         setImages(response.data.images);
       } catch (error) {
         console.error('Error fetching images:', error);
@@ -29,7 +29,7 @@ const Images = () => {
 
   const handleImageClick = async (image) => {
     try {
-      await axios.post('http://localhost:5000/book_call', {
+      await axios.post('https://memu-mongo.onrender.com/book_call', {
         image: image.image_data, 
         task_id: task_id  
       });

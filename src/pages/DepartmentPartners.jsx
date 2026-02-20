@@ -15,7 +15,7 @@ const DepartmentPartners = () => {
 
   const fetchPartners = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/partners?department=${department}`);
+      const response = await axios.get(`https://memu-mongo.onrender.com/partners?department=${department}`);
       setPartners(response.data);
     } catch (error) {
       console.error('Error fetching partners:', error);

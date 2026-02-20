@@ -19,7 +19,7 @@ const Reviews = () => {
   });
 
   useEffect(() => {
-    axios.get('http://localhost:5000/reviews')
+    axios.get('https://memu-mongo.onrender.com/reviews')
       .then(response => {
         setReviews(response.data.reviews);
       })
@@ -48,7 +48,7 @@ const Reviews = () => {
       formDataToSend.append('image', formData.image);
     }
 
-    axios.post('http://localhost:5000/reviews', formDataToSend, {
+    axios.post('https://memu-mongo.onrender.com/reviews', formDataToSend, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }

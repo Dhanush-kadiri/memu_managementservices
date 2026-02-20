@@ -13,7 +13,7 @@ const FunctionEvents = () => {
   const navigate = useNavigate('')
 
   useEffect(() => {
-    axios.get('http://localhost:5000/images?event_type=function')
+    axios.get('https://memu-mongo.onrender.com/images?event_type=function')
       .then(response => {
         setImages(response.data.images);
       })
@@ -47,7 +47,7 @@ const FunctionEvents = () => {
     formData.append('image', selectedFile);
     formData.append('event_type', 'function');
 
-    axios.post('http://localhost:5000/upload', formData)
+    axios.post('https://memu-mongo.onrender.com/upload', formData)
       .then(response => {
         setOpen(false);
         window.location.reload();

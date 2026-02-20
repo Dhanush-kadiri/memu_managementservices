@@ -86,7 +86,6 @@ const DepartmentPartners = () => {
   const [partners, setPartners] = useState([]);
   const [selectedPartner, setSelectedPartner] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchPartners();
   }, [department]);

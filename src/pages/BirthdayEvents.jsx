@@ -12,7 +12,7 @@ const BirthdayEvents = () => {
   const navigate = useNavigate('')
 
   useEffect(() => {
-    axios.get('http://localhost:5000/images?event_type=birthday')
+    axios.get('https://memu-mongo.onrender.com/images?event_type=birthday')
       .then(response => {
         setImages(response.data.images);
       })
@@ -50,7 +50,7 @@ const BirthdayEvents = () => {
     formData.append('image', selectedFile);
     formData.append('event_type', 'birthday');
 
-    axios.post('http://localhost:5000/upload', formData)
+    axios.post('https://memu-mongo.onrender.com/upload', formData)
       .then(response => {
         setOpen(false);
         window.location.reload();

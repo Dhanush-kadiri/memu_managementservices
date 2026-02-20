@@ -34,7 +34,7 @@ const CallBooking = () => {
       image: image || null
     };
 
-    axios.post('http://localhost:5000/book_call', data)
+    axios.post('https://memu-mongo.onrender.com/book_call', data)
       .then(response => {
         alert('Call booked successfully!');
         

@@ -278,7 +278,7 @@ const ImagePost = () => {
     formData.append('image', image);
 
     try {
-      const response = await axios.post('http://localhost:5000/upload', formData, {
+      const response = await axios.post('https://memu-mongo.onrender.com/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -298,7 +298,7 @@ const ImagePost = () => {
     formData.append('description', description);
 
     try {
-      const response = await axios.post('http://localhost:5000/gallery', formData, {
+      const response = await axios.post('https://memu-mongo.onrender.com/gallery', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

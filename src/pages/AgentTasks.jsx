@@ -270,7 +270,7 @@ const AgentTasks = () => {
     formData.append('description', description);
 
     try {
-      const response = await axios.post('http://localhost:5000/gallery', formData, {
+      const response = await axios.post('https://memu-mongo.onrender.com/gallery', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -295,7 +295,7 @@ const AgentTasks = () => {
   useEffect(() => {
     const fetchAgentProfile = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/agent_profile', {
+        const response = await axios.get('https://memu-mongo.onrender.com/agent_profile', {
           params: { email: agentEmail }
         });
         setAgentProfile(response.data);
@@ -306,7 +306,7 @@ const AgentTasks = () => {
 
     const fetchTasks = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/tasks', {
+        const response = await axios.get('https://memu-mongo.onrender.com/tasks', {
           params: { email: agentEmail }
         });
         setTasks(response.data.tasks);
